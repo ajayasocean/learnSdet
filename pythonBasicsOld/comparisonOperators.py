@@ -1,0 +1,15 @@
+# Comparison operators return True or False:
+a = eval(input('Please input first data for comparision\n'))
+b = eval(input('Please input second data for comparision\n'))
+c = input('Please input third data for comparision\n')
+# print(a)
+# print(b)
+# print(c)
+print("equality check (==)  says", a==b)
+print("less than check (<)  says", a<b)
+print("greater than check (>)  says", a>b)
+print("less than equal to check (<=)  says", a<=b)
+print("greater than equal check (>=)  says", a>=b)
+print("not equal to check (!=)  says", a!=b)
+print("Expression a<b<=c says", a<b<=c)
+#print("not equal to check (!=)  says", a<>b) // Not working in Python3

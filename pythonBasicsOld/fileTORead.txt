@@ -1,0 +1,4 @@
+This is a test File.
+we need to check if readFile program works or not.
+let me enter some text here.
+This is an input file.

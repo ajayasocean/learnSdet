@@ -1,0 +1,19 @@
+1. Press Shift twice and search for a Git branch, tag, commit hash or message to jump to it in the Log view:
+2. To close all editor tabs, right-click a tab and select Close All.
+3. To close all tabs except the active one, press Alt (Windows and Linux) or Alt(Option) (macOS)
+and click the Close button on the active tab.
+4. To open a file in the editor at a particular line, press Ctrl+Shift+N (Navigate | File ),
+start typing the filename, choose from the suggestion list, and then type : followed by the line number.
+5. Use live templates to insert frequent code constructs.
+When you select a live template from the suggestion list,
+the template expands to the variant that is defined on the Editor | Live Templates
+page of the Settings/Preferences dialog Ctrl+Alt+S.
+ Use Tab to move between the template fields.
+
+6. Get access to the most common breakpoint actions and filters through intention actions (Alt+Enter ).
+
+7.The navigation bar at the top is a quick alternative to the Project tool window where you can go through the structure of your project,
+open specific files, and jump to specific code elements in the current file.
+Press Alt+Home to show the navigation bar and use arrow keys to switch between files and folders.
+
+8.

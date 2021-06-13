@@ -1,0 +1,36 @@
+ Firmware Testing
+
+Hardware & Firmware testing of a product involve firmware upgrade with OS upgrade and product upgrade.
+
+Hardware Testing
+Hardware testing is to check/ensure the functionality, stability of hardware component.
+Ensure that it should not have process fault.
+It also include the heavy workload task for memory and CPU to check the performance and durability.
+
+There are many components involve in hardware testing like BIOS, CPU/Processor.
+Test the hardware to ensure its logical correctness and to ensure that follow appropriate standards.
+Using functional tests to determine whether met the test criteria.
+There are the few techniques commonly used for hardware testing:
+1. Software-based self-testing
+2. ATPG (Automatic test pattern generation)
+3. BIST (Built-in self-test)
+
+Firmware Testing
+Firmware is a computer program that is embedded in a hardware device that provides control,
+monitoring and data manipulation of engineered products and systems.
+The firmware contained devices provides the low-level control program for the device.
+Examples of devices containing firmware are embedded systems, computers, computer peripherals, mobile phones, etc.
+
+Importance of Firmware testing is the certification of firmware system meets its requirements with respect to functional correctness
+as well as performance, operational, and implementational properties.
+Then to reduce the risk and improve the performance.
+
+These are the three techniques of firmware testing.
+
+Tests the microprogram level that consider complete microprograms by analyzing their code or investigating the machine states after execution.
+Tests the microinstruction level that consider single microinstructions by analyzing the assignment of micro-operations to them or investigating the machine states after execution.
+Tests the micro-operation level that consider individual micro-operations by monitoring the execution
+The firmware testing is huge and complex task to complete, to overcome this challenge there are some automated tools available.
+
+Firmware Test Suite (fwts): FWTS is a Linux tool that automates firmware checking.
+Tests that are designed to exercise and test different aspects of a machine’s firmware – including ACPI, UEFI, hardware configuration, power-saving and so on.

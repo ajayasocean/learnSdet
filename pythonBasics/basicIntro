@@ -1,0 +1,12 @@
+# basic introduction
+ajay@LU-13S7152:~$ which python
+/usr/bin/python
+ajay@LU-13S7152:~$ which pip
+/usr/bin/pip
+ajay@LU-13S7152:~$ python version
+python: can't open file 'version': [Errno 2] No such file or directory
+ajay@LU-13S7152:~$ python --version
+Python 3.8.5
+ajay@LU-13S7152:~$ pip --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+ajay@LU-13S7152:~$
