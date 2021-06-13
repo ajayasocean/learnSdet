@@ -2,3 +2,6 @@ Python SDET
 
 Backend/ Rest API Testing with BDD Framework (API+SQL+SSH).
 Build Python Utilities from Scratch to automate Rest API with SQL Integration,Batch Jobs Automation,Web Scraping etc.
+
+June 13, 2021
+Just added git account to manage this repository
