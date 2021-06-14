@@ -2,7 +2,7 @@
 # parsing a complete file
 import json
 
-with open("/home/ajay/learnSdet/pythonBasics/samplejson.json") as f:
+with open("/home/ajay/learnSdet/pythonBasics/sampleJson.json") as f:
     jsonData = json.load(f)  # json data is of dictionary data type
     print(type(jsonData), '\n', jsonData)
 
