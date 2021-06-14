@@ -17,5 +17,9 @@ print(key_name)
 key_skills = dict_ajay_skills['skills']
 print(key_skills,' : ', type(key_skills))
 number_of_skills = len(key_skills)
-print('Number of skills : ',number_of_skills)
+print('Number of skills : ', number_of_skills)
 print('first skills is: ', key_skills[1])
+# one liner method for advance level
+print(dict_ajay_skills['skills'][0])
+
+
