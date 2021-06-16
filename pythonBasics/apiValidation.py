@@ -20,3 +20,7 @@ searchCriteria = input('Please enter search criteria among: book_name, isbn, ais
 for i in range(lengthOfResponse1Json):  # iterating through the list
     dataResponse1 = response1Json[i]  # storing element in each iteration to a variable
     print(searchCriteria, ':\t', dataResponse1[searchCriteria])  # printing as value of search criteria
+
+# validating status code of the response received
+print('Response status code is: \t', response1.status_code)
+
