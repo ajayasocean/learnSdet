@@ -1,15 +1,12 @@
 # End to end automation flow of API calls using Python
 import requests
+from configurations import *
+from resources import *
 from payload import *
-import configparser
-import json
-config = configparser.ConfigParser()
-config.read('globalProperties.ini')
-print(config.sections())
-baseUrl = config['api']['endpoint']
+baseUrl = getconfig()['api']['endpoint']
 print(baseUrl)
 # Add a new book
-pathAdd = '/Library/Addbook.php'
+pathAdd = ApiResources.addBook
 finalUrlAdd = baseUrl+pathAdd
 head1 = {'Content-Type': 'application/json'}
 postResponse2 = requests.post(finalUrlAdd, json=addBookPayload('mill'), headers=head1,)
@@ -19,7 +16,7 @@ print('Book successfully added', postResponse2Json)
 print(type(postResponse2Json))
 
 # Deleting the added book
-pathDel = '/Library/DeleteBook.php'
+pathDel = ApiResources.delBook
 finalUrlDel = baseUrl+pathDel
 addedBookId = postResponse2Json['ID']
 print(addedBookId)
