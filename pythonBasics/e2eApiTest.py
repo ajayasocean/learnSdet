@@ -1,6 +1,6 @@
 # End to end automation flow of API calls using Python
 import requests
-from configurations import *
+from config.configurations import *
 from resources import *
 from payload import *
 baseUrl = getconfig()['api']['endpoint']

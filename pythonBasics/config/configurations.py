@@ -4,5 +4,5 @@ import configparser
 
 def getconfig():
     config = configparser.ConfigParser()
-    config.read('globalProperties.ini')
+    config.read('config/globalProperties.ini')
     return config
