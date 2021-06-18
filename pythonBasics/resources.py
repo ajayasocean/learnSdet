@@ -4,4 +4,5 @@ class ApiResources:
     delBook = '/Library/DeleteBook.php'
     getBookByAuthorName = '/Library/GetBook.php'
     gitHubRepo = '/orgs/octokit/repos'
-    acceptHeader = {'Accept': 'application/vnd.github.v3+json'}
+    HeadAuthorize = {'Authorization': 'Bearer {}'.format('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')}
+    HeadAccept = {'Accept': 'application/vnd.github.v3+json'}

@@ -7,29 +7,27 @@ from resources import *
 gitAccessUrl = getconfig()['api']['gitHubUrl']
 print(gitAccessUrl)
 userName = getconfig()['gitHubCredentials']['userName']
-# get password by user
-
-
-def get_password():
-    password = input('Please enter GitHub password:\n')
-    return password
-
-
+# get password by user, not required as basic auth deprecated on github since 5may 2021
+# def get_password():
+#     password = input('Please enter GitHub password:\n')
+#     return password
 # session manager
-sessionManager = requests.session()
-sessionManager.auth = auth = (userName, get_password())
-head2 = ApiResources.acceptHeader
-# requesting git hub with username and password for access
-responseGitAuth = requests.get(gitAccessUrl+'/user', headers=head2, auth=(userName, get_password()))
-# responseGitAuth = sessionManager.get(gitAccessUrl+'/user', headers=head2)
+with requests.Session() as sessionManager:
+    HeadAccept = ApiResources.HeadAccept
+    sessionManager.headers.update(HeadAccept)
+    HeadAuthorize = ApiResources.HeadAuthorize
+    sessionManager.headers.update(HeadAuthorize)
+# requesting git hub with authorization header
+# responseGitAuth = requests.get(gitAccessUrl+'/user', headers=head2)
+responseGitAuth = sessionManager.get(gitAccessUrl+'/user')
 print(responseGitAuth.status_code)
-# print(responseGitAuth.text)
+print(responseGitAuth.json())
 
-# accessing an org repo
+# accessing octokit org's repo
 pathOrgRepos = ApiResources.gitHubRepo  # preparing base url using configurations.py
 repoUrl = gitAccessUrl+pathOrgRepos  # making final url by adding base url and resource path from resources.py
 print(repoUrl)
-responseUserRepos = requests.get(repoUrl, headers=head2)
+responseUserRepos = sessionManager.get(repoUrl)
 print(responseUserRepos.status_code)
 # print(responseUserRepos.json())
 
