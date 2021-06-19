@@ -15,5 +15,3 @@ dict1['lastName'] = 'Sagar'
 dict1['gender'] = 'Male'
 print(dict1)
 print(dict1['lastName'])
-
-

@@ -2,9 +2,9 @@
 
 a, b, c, d = 3, 4.5, 'Test', ' concat string '
 # int
-print('{} {} {} {}'.format('Type of ', a , ' is ', type(a)))
+print('{} {} {} {}'.format('Type of ', a, ' is ', type(a)))
 # float
-print('{} {} {} {}'.format('Type of ', b , ' is ', type(b)))
+print('{} {} {} {}'.format('Type of ', b, ' is ', type(b)))
 # string
 e = c+d
 print(c+d)  # + can be used as both c and d are of string data type
@@ -24,4 +24,3 @@ values[2] = 3  # list[index] = updated_element)
 print(values)
 del values[5]  # del list[index] , deletes an element
 print(values)
-

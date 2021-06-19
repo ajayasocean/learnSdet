@@ -2,11 +2,11 @@
 # auth = ('user', 'password')
 import requests
 from config.configurations import *
-from resources import *
+from config.resources import *
 
-gitAccessUrl = getconfig()['api']['gitHubUrl']
+gitAccessUrl = get_config()['api']['gitHubUrl']
 print(gitAccessUrl)
-userName = getconfig()['gitHubCredentials']['userName']
+# userName = get_config()['gitHubCredentials']['userName']
 # get password by user, not required as basic auth deprecated on github since 5may 2021
 # session manager
 with requests.Session() as sessionManager:
@@ -28,4 +28,3 @@ with requests.Session() as sessionManager:
     responseUserRepos = sessionManager.get(repoUrl)
     print(responseUserRepos.status_code)
     # print(responseUserRepos.json())
-

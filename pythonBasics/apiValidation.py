@@ -23,4 +23,3 @@ for i in range(lengthOfResponse1Json):  # iterating through the list
 
 # validating status code of the response received
 print('Response status code is: \t', response1.status_code)
-

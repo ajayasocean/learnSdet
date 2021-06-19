@@ -1,5 +1,5 @@
 # for loop
-obj = [2,3,5,7,9]
+obj = [2, 3, 5, 7, 9]
 for i in obj:  # for iterationKey in dataSet:
     print(i)  # action as for block
 
@@ -23,6 +23,3 @@ for j in range(1, 10, 2):
 print('for loop with only end argument in range')
 for k in range(10):
     print(k)
-
-
-

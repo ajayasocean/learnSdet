@@ -3,9 +3,9 @@ it = 4
 while it > 1:
     print(it)  # this case is like a infinite loop as this condition is true infinitely now
     #  to make it a definite loop lets do below action
-    it -= 1 # assignment variation ( here it = it-1)
+    it -= 1  # assignment variation ( here it = it-1)
 print('while loop finished execution')
-#  print('conditon is not true')
+#  print('condition is not true')
 
 # while loop variation with a if condition
 print('while execution with if condition')
@@ -13,7 +13,7 @@ wit = 4
 while wit > 1:
     if wit != 3:
         print(wit)
-    wit -= 1 # assignment variation ( here it = it-1)
+    wit -= 1  # assignment variation ( here it = it-1)
 
 
 # while loop variation with a break
@@ -23,7 +23,7 @@ while a > 1:
     if a == 3:
         break
     print(a)
-    a -= 1 # assignment variation ( here it = it-1)
+    a -= 1  # assignment variation ( here it = it-1)
 
 # while loop variation with a continue
 print('while loop variation with a continue')
@@ -36,5 +36,3 @@ while a > 1:
     if a == 3:
         break
     a -= 1
-
-

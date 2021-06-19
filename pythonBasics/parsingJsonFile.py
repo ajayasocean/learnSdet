@@ -1,8 +1,8 @@
-# parsing a josn file into dictionary
+# parsing a json file into dictionary
 # parsing a complete file
 import json
 
-with open("/home/ajay/learnSdet/pythonBasics/sampleJson.json") as f:
+with open("config/sampleJson.json") as f:
     jsonData = json.load(f)  # json data is of dictionary data type
     print(type(jsonData), '\n', jsonData)
 
@@ -19,7 +19,5 @@ with open("/home/ajay/learnSdet/pythonBasics/sampleJson.json") as f:
 # accessing dashboard website from json
     dashBoard = jsonData['dashboard']
     print(type(dashBoard), '\n', dashBoard)
-    webSite =  jsonData['dashboard']['website']  # dictionary type value
+    webSite = jsonData['dashboard']['website']  # dictionary type value
     print(webSite)
-
-

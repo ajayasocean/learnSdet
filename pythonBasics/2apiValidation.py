@@ -22,7 +22,9 @@ print('Response cookies are: \n', response2.cookies)
 
 # Retrieve the book details for isbn = tretrer i.e match isbn and then print complete book details.
 response2Json = response2.json()
+print('Search response data:\t', response2Json)
 lengthOfResponse2Json = len(response2Json)
+dataResponse2 = {}
 for actualBook in range(lengthOfResponse2Json):  # iterating through the list
     dataResponse2 = response2Json[actualBook]  # storing element in each iteration to a variable
     if dataResponse2['isbn'] == 'tretrer':  # evaluating condition
@@ -34,4 +36,3 @@ expectedBook = {
         "aisle": "333"
     }
 assert expectedBook == dataResponse2  # asserting for expected book details
-

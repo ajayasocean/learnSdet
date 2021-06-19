@@ -2,7 +2,7 @@
 # if statement
 greeting = 'Good Morning'
 if greeting == 'Morning':
-    print(gretting)
+    print(greeting)
 
 # if..else statement
 if greeting == 'Morning':
@@ -17,5 +17,3 @@ elif greeting == 'Good Morning':
     print(greeting)
 else:
     print('anything')
-
-
