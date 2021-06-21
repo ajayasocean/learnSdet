@@ -1,7 +1,7 @@
 # Parsing complex Json with nested Structure and extract values
 import json
 findCoursePrice = input('Please enter course name for which you want to know the price\n')
-with open("config/sampleJson.json") as f:
+with open("../config/sampleJson.json") as f:
     data = json.load(f)
     #  print(type(data['courses']))
     for course in data['courses']:  # iterating json without using index and use for loop with if condition

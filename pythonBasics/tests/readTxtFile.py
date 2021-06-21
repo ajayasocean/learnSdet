@@ -1,5 +1,5 @@
 # reading a text file using python
-file = open('config/testTextFile.txt')  # open(fileName is a function to read a text file.)
+file = open('../config/testTextFile.txt')  # open(fileName is a function to read a text file.)
 str_file_data = file.read()
 print(str_file_data)
 print(type(str_file_data))

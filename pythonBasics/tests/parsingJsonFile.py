@@ -2,7 +2,7 @@
 # parsing a complete file
 import json
 
-with open("config/sampleJson.json") as f:
+with open("../config/sampleJson.json") as f:
     jsonData = json.load(f)  # json data is of dictionary data type
     print(type(jsonData), '\n', jsonData)
 

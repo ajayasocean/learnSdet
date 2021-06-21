@@ -1,17 +1,22 @@
 # OOPS basics, class & objects
+def exam():  # method declaration
+    print('method of a class')
+
+
 class Example:  # class declaration
     num = 100  # class variable declaration
 
-    def exam(self):  # method declaration
-        print('method of a class')
-
 
 obj = Example()  # object creation
-obj.exam()  # method call via a object
+exam()  # method call via a object
 print(obj.num)  # call variable call via object
 
 
 # constructor and self
+
+
+def get_value():  # method declaration
+    print('I am executing as method in class')
 
 
 class Test:  # class declaration
@@ -20,16 +25,13 @@ class Test:  # class declaration
     def __init__(self):  # default constructor
         print('I am called automatically  when object is created')
 
-    def get_value(self):  # method declaration
-        print('I am executing as method in class')
-
 
 obj1 = Test()  # object creation
-obj1.get_value()  # method call via a object
+get_value()  # method call via a object
 print(obj1.val)  # call variable call via object
 
 obj2 = Test()  # object creation
-obj2.get_value()  # method call via a object
+get_value()  # method call via a object
 print(obj2.val)  # call variable call via object
 
 

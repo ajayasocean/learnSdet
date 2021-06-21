@@ -2,7 +2,7 @@
 import requests
 import json
 # Add a new book
-with open('config/postRequestDataJsonFile.json', 'r') as j:
+with open('../config/postRequestDataJsonFile.json', 'r') as j:
     requestDataJson = json.load(j)
 baseUrl = 'http://216.10.245.166/Library/Addbook.php'
 head1 = {'Content-Type': 'application/json'}
