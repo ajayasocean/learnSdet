@@ -1,6 +1,5 @@
 # End to end automation flow of API calls using Python
 import requests
-from config.configurations import *
 from config.resources import *
 from config.payload import *
 baseUrl = get_config()['api']['endpoint']
@@ -9,8 +8,10 @@ print(baseUrl)
 pathAdd = ApiResources.addBook
 finalUrlAdd = baseUrl+pathAdd
 head1 = {'Content-Type': 'application/json'}
-postResponse2 = requests.post(finalUrlAdd, json=add_book_payload('jilli'), headers=head1,)
-assert postResponse2.status_code == 200
+# calling in get_query function, sending add_book_query (actual sql query) as argument
+add_book_query = 'select * from Books'
+postResponse2 = requests.post(finalUrlAdd, json=build_payload_from_db(add_book_query), headers=head1,)
+print(postResponse2.status_code)
 postResponse2Json = postResponse2.json()
 print('Book successfully added', postResponse2Json)
 print(type(postResponse2Json))

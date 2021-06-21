@@ -26,3 +26,13 @@ def get_connection():
     except Error as err:
         print(err)
 
+
+# making a connection to database and executing add_book_query using get_query function
+def get_query(add_book_query):
+    add_book_connection = get_connection()
+    add_book_cursor = add_book_connection.cursor()
+    add_book_cursor.execute(add_book_query)
+    result_set_data = add_book_cursor.fetchone()
+    add_book_connection.close()
+    return result_set_data
+
