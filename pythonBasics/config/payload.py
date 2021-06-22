@@ -2,11 +2,11 @@
 from config.configurations import *
 
 
-def add_book_payload(isbni):
+def add_book_payload(isbn, aisle):
     body = {
         "name": "New Day",
-        "isbn": isbni,
-        "aisle": "9999",
+        "isbn": isbn,
+        "aisle": aisle,
         "author": "Tester"
     }
     return body
