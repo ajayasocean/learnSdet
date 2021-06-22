@@ -17,7 +17,7 @@ def step_impl(context):
     path_add = ApiResources.addBook
     context.final_url_add = base_url + path_add
     context.head1 = {'Content-Type': 'application/json'}
-    context.isbni = 'tetl'
+    context.isbni = 'tebe'
     context.payload = add_book_payload(context.isbni)
 
 
@@ -28,5 +28,8 @@ def step_impl(context):
 
 @then('book is successfully added')
 def step_impl(context):
-    print(context.add_book_response.status_code)
-    # assert context.postResponse2Json['Msg'] == "successfully added"
+    print(context.add_book_response.status_code, '\n')
+    add_book_response_json = context.add_book_response.json()
+    print(add_book_response_json, '\n\n')
+    # added /n to make sure behave doesn't overwrites our print as it used escape sequence.
+    assert add_book_response_json['Msg'] == "successfully added"
