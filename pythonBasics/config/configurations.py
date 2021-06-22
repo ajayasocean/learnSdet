@@ -3,6 +3,7 @@ import configparser
 import mysql.connector
 from mysql.connector import Error
 
+
 def get_config():
     config = configparser.ConfigParser()
     config.read('config/globalProperties.ini')
