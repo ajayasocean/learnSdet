@@ -1,8 +1,8 @@
 # Authenticating API's using Python Automation auth method- Example
 # auth = ('user', 'password')
 import requests
-from config.configurations import *
-from config.resources import *
+from config.configurations import get_config
+from config.resources import ApiResources
 
 gitAccessUrl = get_config()['api']['gitHubUrl']
 print(gitAccessUrl)

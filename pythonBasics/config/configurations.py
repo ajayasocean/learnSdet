@@ -5,20 +5,23 @@ from mysql.connector import Error
 
 
 def get_config():
-    config = configparser.ConfigParser()
+    config = configparser.ConfigParser
     config.read('config/globalProperties.ini')
+    print(config['api']['gitHubUrl'])
+    print(config['sql']['host'])
     return config
 
 
-connect_config = {'host': get_config()['SQL']['host'],
-                  'database': get_config()['SQL']['database_name'],
-                  'user': get_config()['SQL']['username'],
-                  'password': get_config()['SQL']['password'],
+connect_config = {'host': get_config()['sql']['host'],
+                  'database': get_config()['sql']['database_name'],
+                  'user': get_config()['sql']['username'],
+                  'password': get_config()['sql']['password'],
                   }
 
 
 def get_connection():
     # setting up a my sql connection with db
+    print(connect_config)
     try:
         connection = mysql.connector.connect(**connect_config)
         if connection.is_connected():
