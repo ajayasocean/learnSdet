@@ -5,10 +5,8 @@ from mysql.connector import Error
 
 
 def get_config():
-    config = configparser.ConfigParser
-    config.read('config/globalProperties.ini')
-    print(config['api']['gitHubUrl'])
-    print(config['sql']['host'])
+    config = configparser.ConfigParser()
+    config.read('../config/globalProperties.ini')
     return config
 
 
@@ -18,12 +16,15 @@ connect_config = {'host': get_config()['sql']['host'],
                   'password': get_config()['sql']['password'],
                   }
 
+print(connect_config)
+
 
 def get_connection():
     # setting up a my sql connection with db
-    print(connect_config)
     try:
+        print(connect_config)
         connection = mysql.connector.connect(**connect_config)
+        print(connection)
         if connection.is_connected():
             print('connected successfully\n')
             return connection
@@ -37,6 +38,6 @@ def get_query(add_book_query):
     add_book_cursor = add_book_connection.cursor()
     add_book_cursor.execute(add_book_query)
     result_set_data = add_book_cursor.fetchone()
+    print(result_set_data)
     add_book_connection.close()
     return result_set_data
-
