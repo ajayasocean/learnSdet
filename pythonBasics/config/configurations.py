@@ -1,4 +1,6 @@
-# configurations here
+"""
+configurations here
+"""
 import configparser
 import mysql.connector
 from mysql.connector import Error
