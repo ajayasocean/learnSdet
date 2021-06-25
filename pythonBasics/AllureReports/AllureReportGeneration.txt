@@ -1,0 +1,21 @@
+Installation and Usage
+$ pip install allure-behave
+$ behave -f allure_behave.formatter:AllureFormatter -o %allure_result_folder% ./features
+Now lets install alure report
+Download allure-2.14.0.tgz from https://github.com/allure-framework/allure2/releases/tag/2.14.0
+        sudo tar -zxvf allure-2.14.0.tgz -C /opt
+        sudo ln -s /opt/allure-2.7.0/bin/allure /usr/bin/allure
+        rm -rf allure-2.7.0.tgz
+        allure --version
+
+To generate html report:
+$ allure serve %allure_result_folder%
+
+Please Note:
+1. java should be installed on the machine and JAVA_HOME should be set in /etc/environment
+
+2. Support behave parallel
+Current implementation of behave-parallel makes some allure features inaccessible. So in this case you need patch your environment.py files instead using formatter. If you don’t use environment.py, just crate empty one with calling allure like in example below.
+from allure_behave.hooks import allure_report
+### your code
+allure_report("path/to/result/dir")
