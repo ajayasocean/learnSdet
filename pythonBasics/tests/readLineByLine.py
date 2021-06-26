@@ -6,3 +6,4 @@ while line1 != '':
     i += 1
     print(i, '.', line1)
     line1 = file1.readline()
+file1.close()

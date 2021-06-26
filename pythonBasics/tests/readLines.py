@@ -3,3 +3,4 @@ file1 = open('../config/testTextFile.txt')
 lines = file1.readlines()
 for line1 in lines:
     print(line1)
+file1.close()
