@@ -37,4 +37,3 @@ with open(file, 'r') as read_csv_after_adding:
     csv_data_after_adding = csv.reader(read_csv_after_adding, delimiter=',')
     list_csv_data_after_adding = list(csv_data_after_adding)
     print(list_csv_data_after_adding)
-

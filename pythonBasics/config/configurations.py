@@ -17,8 +17,7 @@ connect_config = {'host': get_config()['sql']['host'],
                   'user': get_config()['sql']['username'],
                   'password': get_config()['sql']['password'],
                   }
-
-print(connect_config)
+# print(connect_config)
 
 
 def get_connection():
@@ -40,3 +39,4 @@ def get_query(add_book_query):
     result_set_data = add_book_cursor.fetchone()
     add_book_connection.close()
     return result_set_data
+
