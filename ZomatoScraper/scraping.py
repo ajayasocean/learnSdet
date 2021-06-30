@@ -143,7 +143,8 @@ def slugify(text):
 def main():
     url = 'https://www.zomato.com/london/best-restaurants'  # declaring url to be accessed
     restaurants_list = []  # initializing a list of restaurants
-    # for loop as per number of pages on url
+    # for loop as per number of pages on url, we can change loop iteration if as pre requirement
+    # range(1530, 0, -1) for all pages restaurant data
     for page in range(1530, 1529, -1):
         response_content = get_page_html(url, page)  # calling get_page_html to return response content
         # adding list of restaurants returned from get_restaurants function to restaurants_list
