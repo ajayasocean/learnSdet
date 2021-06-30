@@ -4,7 +4,7 @@ Scrape the following page
 https://www.zomato.com/london/best-restaurants?page=1530
 And get me all the restaurant data in json format.
 """
-# importing required libraries, same is also available in requirements.text file
+# importing required libraries, same is also available in requirements.txt file
 import re
 import json
 import unidecode
