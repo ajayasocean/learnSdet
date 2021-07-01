@@ -25,8 +25,8 @@ def get_page_html(url, page):
             response_content = response.content  # when response code is 200 then storing response content.
             # print(response_soup.prettify())
             return response_content  # if response code is 200 then returning response content.
-    except Error as err:
-        print(err)
+    except Exception as e:
+        print(e)
 
 
 # defining a function that takes response content as argument, parses it as html and process further

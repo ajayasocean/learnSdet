@@ -42,4 +42,5 @@ def driver():
     print('product of numbers', obj.get_product_of_nums())  # method call for multiply
 
 
-driver()
+if __name__ == '__main__':
+    driver()

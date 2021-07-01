@@ -12,11 +12,11 @@ count = 0
 
 # checking if provided number of terms is valid
 
-if nterm < - 0:
+if nterm <= 0:
     print("Please enter positive integer")
 # if there is only one term, return n1
 elif nterm == 1:
-    print("{}{}{}{}".format('Fibonacci till', nterm, 'is :\n', n1))
+    print("{}{}{}{}".format('Fibonacci till ', nterm, 'is :\n', n1))
 
 # generate fibonacci sequence
 else:
