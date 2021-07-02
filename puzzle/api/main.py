@@ -39,12 +39,12 @@ def solve_puzzle(head_count: int, leg_count: int):
     # checking for invalid input values
     if (legs % 2 != 0) or (heads == 0) or (heads > legs):
         # updating resultant dictionary
-        solution['details'] = "No Solution"
+        solution['details'] = "no_solution"
 
     # checking for negative number of rabbits and chickens
     elif rabbits < 0 or chickens < 0:
         # updating resultant dictionary
-        solution['message'] = "Invalid solution"
+        solution['message'] = "invalid_solution"
         solution['rabbits'] = rabbits
         solution['chickens'] = chickens
 

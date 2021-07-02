@@ -18,7 +18,7 @@ def main():
             self.__chickens = 0
             self.__rabbits = 0
             self.__solution = {}
-            self.__msg = "No solution"
+            self.__msg = "no_solution"
 
         # setting values for heads and legs from user input
         def set__head_leg(self, head_count, leg_count):
@@ -44,7 +44,7 @@ def main():
             elif self.__rabbits < 0 or self.__chickens < 0:
 
                 # updating resultant dictionary
-                self.__solution['message'] = "Invalid solution"
+                self.__solution['message'] = "invalid_solution"
                 self.__solution['rabbits'] = self.__rabbits
                 self.__solution['chickens'] = self.__chickens
 
@@ -71,6 +71,7 @@ def main():
 
     # printing result
     print(answer)
+
 
 # run main()
 if __name__ == '__main__':
