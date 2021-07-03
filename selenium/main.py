@@ -1,11 +1,24 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 def chrome_driver():
-    logger = ["--verbose", "--log-path=/home/ajay/drivers/chromedriver.log"]
+    # log file for chrome driver
+    logger = ["--verbose", "--log-path=../selenium/chromedriver.log"]
     url1 = "https://imdb.com"
     url2 = "https://netflix.com"
-    driver = webdriver.Chrome(service_args=logger)
+    # to run run script in chromedriver
+    # driver = webdriver.Chrome(service_args=logger)
+    # to run chromedriver in headless mode
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(service_args=logger, options=chrome_options)
+    # to run run script in firefox
+    # driver = webdriver.Firefox()
+    # to run gekodriver in headless mode, facing a bug
+    # firefox_options = webdriver.FirefoxOptions()
+    # firefox_options.add_argument("--headless")
+    # driver = webdriver.Firefox(options=firefox_options)
     driver.implicitly_wait(5)
     driver.maximize_window()
     driver.get(url1)
@@ -20,6 +33,7 @@ def chrome_driver():
     driver.minimize_window()
     driver.implicitly_wait(5)
     driver.quit()
+    print("webdriver is done for the day")
 
 
 if __name__ == '__main__':

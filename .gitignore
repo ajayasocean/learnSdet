@@ -1,2 +1,19 @@
-# ignoring report jsons
-AllureReports/*.json
+# ignoring file
+ChinesePuzzle/.idea/
+ChinesePuzzle/.venv/
+ChinesePuzzle/__pycache__/
+ZomatoScraper/.idea/
+ZomatoScraper/.venv/
+ZomatoScraper/restaurant_data.json
+puzzle/.idea/
+puzzle/.venv/
+puzzle/__pycache__/
+puzzle/__pycache__/api/__pycache__/
+pythonBasics/.idea/
+pythonBasics/AllureReports/
+pythonBasics/ZomatoScraper/
+pythonBasics/config/__pycache__/
+pythonBasics/output/
+selenium/*.log
+selenium/.idea/
+selenium/.venv/
