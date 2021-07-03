@@ -1,0 +1,13 @@
+ajay@LU-13S7152:~/learnSdet/selenium$ source .venv/bin/activate
+
+download, unzip resulting
+$ mv /home/ajay/Downlaods/chomedriver
+$ sudo chmod a+x chromedriver
+move chrome driver to desired location for me "usr/local/share/"
+$ mv /home/ajay/Downlaods/chomedriver /usr/local/share/chomedriver
+$ cd usr/local/share/
+$ sudo chmod a+x chromedriver
+$ sudo ln -s /usr/local/share/chomedriver /usr/bin/chromedriver
+$ sudo ln -s /usr/local/share/chomedriver /usr/local/bin/chromedriver
+$ cd /usr/bin/
+ajay@LU-13S7152:/usr/bin$ sudo chmod a+x chromedriver

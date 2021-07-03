@@ -3,7 +3,7 @@
 #     options.add_argument('--disable-gpu')
 #     options.add_argument('log-level=3')
 #     options.add_argument('user-agent=custom_user_agent')
-#     driver = webdriver.Chrome(executable_path=r'../driver/chromedriver', options=options)
+#     driver = webdriver.Chrome(executable_path=r'../driver/chromedriver', options=options ----no-sandbox)
 #     driver.get('https://www.zomato.com/london/best-restaurants?page=1530')
 #     print(driver.page_source)
 #     response_soup = BeautifulSoup(restaurant_list, 'html.parser')

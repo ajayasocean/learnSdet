@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7c618a3-0379-4ffe-ae1d-05f37bf25264" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ZomatoScraper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ZomatoScraper.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pythonBasics/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonBasics/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../puzzle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonBasics/tests/selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonBasics/tests/selenium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../selenium/sel_chrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/../selenium/sel_chrome.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
