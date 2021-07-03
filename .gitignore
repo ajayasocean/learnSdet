@@ -8,7 +8,7 @@ ZomatoScraper/restaurant_data.json
 puzzle/.idea/
 puzzle/.venv/
 puzzle/__pycache__/
-puzzle/__pycache__/api/__pycache__/
+puzzle/api/__pycache__/
 pythonBasics/.idea/
 pythonBasics/AllureReports/*.json
 pythonBasics/ZomatoScraper/
@@ -16,4 +16,4 @@ pythonBasics/config/__pycache__/
 pythonBasics/output/
 selenium/*.log
 selenium/.idea/
-selenium/.venv/
+selenium/venv/
