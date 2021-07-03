@@ -1,0 +1,10 @@
+ajay@LU-13S7152:~/learnSdet/pythonBasics/ZomatoScraper$ sudo apt-get install python3-venv
+
+ajay@LU-13S7152:~/learnSdet/pythonBasics/ZomatoScraper$ python -m venv .venv
+ajay@LU-13S7152:~/learnSdet/pythonBasics/ZomatoScraper$ source .venv/bin/activate
+
+
+ajay@LU-13S7152:~/learnSdet/pythonBasics/Test$ python -m venv .venv
+ajay@LU-13S7152:~/learnSdet/pythonBasics/Test$ source .venv/bin/activate
+(.venv) ajay@LU-13S7152:~/learnSdet/pythonBasics/Test$ cp ../ZomatoScraper/requirements.txt .
+(.venv) ajay@LU-13S7152:~/learnSdet/pythonBasics/Test$ pip install -r requirements.txt
