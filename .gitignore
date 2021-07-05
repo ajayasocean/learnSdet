@@ -19,5 +19,8 @@ selenium/.idea/
 selenium/venv/
 selenium/.venv/
 pythonBasicsOld/.idea/
+Selenium/*.log
+Selenium/.idea/
+Selenium/venv/
 # to delete files from git: git rm --cached filename
 # to delete directories from git: git rm -r --cached folder_name

@@ -1,0 +1,49 @@
+Install venv
+ajay@LU-13S7152:~/learnSdet/pythonBasics/ZomatoScraper$ sudo apt-get install python3-venv
+$ python -m venv .venv
+ajay@LU-13S7152:~/learnSdet/selenium$ source .venv/bin/activate
+$ pip install selenium
+$ pip freeze > requirements.txt
+-----------------
+$ pip install -r requirements.txt
+
+----------
+download, unzip chromedriver
+$ mv /home/ajay/Downlaods/chomedriver
+$ sudo chmod a+x chromedriver
+move chrome driver to desired location for me "usr/local/share/"
+$ mv /home/ajay/drivers/chromedriver /usr/local/share/chromedriver
+$ cd /usr/local/share
+$ sudo chmod a+x chromedriver
+$ sudo ln -s /usr/local/share/chomedriver /usr/bin/chromedriver
+$ sudo ln -s /usr/local/share/chomedriver /usr/local/bin/chromedriver
+$ cd /usr/bin/
+ajay@LU-13S7152:/usr/bin$ sudo chmod a+x chromedriver
+
+Now create script and execute.
+
+--------
+run script in firefox:
+firefox version:89.0.2 (64-bit)
+downlaod gekodriver, go to directory:
+extract:
+$ tar -zxvf geckodriver-v0.29.1-linux64.tar.gz
+$ sudo chmod a+x geckodriver
+$ sudo mv /home/ajay/drivers/geckodriver /usr/local/share/geckodriver
+$ cd usr/local/share/
+$ sudo chmod a+x geckodriver
+$ sudo ln -s /usr/local/share/geckodriver /usr/bin/geckodriver
+$ sudo ln -s /usr/local/share/geckodriver /usr/local/bin/geckodriver
+$ cd /usr/bin/
+ajay@LU-13S7152:/usr/bin$ sudo chmod a+x geckodriver
+
+---------------
+If you want to run chrome driver in headless mode then:
+    # to run chromedriver in headless mode
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # driver = webdriver.Chrome(service_args=logger, options=chrome_options)
+
+---------------------
+If you want to run gekodriver in headless mode then:
+facing an issue not updating here
