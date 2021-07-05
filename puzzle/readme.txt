@@ -7,15 +7,15 @@ We count {head_count} heads and {leg_count} legs among the chickens and rabbits 
 How many rabbits and how many chickens do we have? then returns the answer as a JSON.
 """
 
-Install venv:
-$ sudo apt-get install python3-venv
+creating and activating venv
+$ python -m venv .venv
+$ source .venv/bin/activate
 
 Install below packages, same is available in requirement.txt file too:
 1. $ pip install fastapi
 2. $ pip install uvicorn[standard]
-
-Navigate to the module directory (../puzzle) then activate venv:
-$ source .venv/bin/activate
+or
+$ pip install -r requirements.txt
 
 Launch the puzzle app:
 $ uvicorn api.main:app --reload

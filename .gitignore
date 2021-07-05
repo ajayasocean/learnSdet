@@ -1,4 +1,4 @@
-# ignoring file
+# git ignore files and directories
 ChinesePuzzle/.idea/
 ChinesePuzzle/.venv/
 ChinesePuzzle/__pycache__/
@@ -17,5 +17,6 @@ pythonBasics/output/
 selenium/*.log
 selenium/.idea/
 selenium/venv/
+selenium/.venv/
 # to delete files from git: git rm --cached filename
 # to delete directories from git: git rm -r --cached folder_name

@@ -1,6 +1,11 @@
+Install venv
+ajay@LU-13S7152:~/learnSdet/pythonBasics/ZomatoScraper$ sudo apt-get install python3-venv
+$ python -m venv .venv
 ajay@LU-13S7152:~/learnSdet/selenium$ source .venv/bin/activate
+$ pip install -r requirements.txt
 
-download, unzip resulting
+----------
+download, unzip chromedriver
 $ mv /home/ajay/Downlaods/chomedriver
 $ sudo chmod a+x chromedriver
 move chrome driver to desired location for me "usr/local/share/"
@@ -36,5 +41,6 @@ If you want to run chrome driver in headless mode then:
     # chrome_options.add_argument("--headless")
     # driver = webdriver.Chrome(service_args=logger, options=chrome_options)
 
+---------------------
 If you want to run gekodriver in headless mode then:
 facing an issue not updating here
