@@ -18,9 +18,9 @@ def web_driver():
 
     # to run run script in firefox
     # driver = webdriver.Firefox()
+
     # to run gekodriver in headless mode, facing a bug
     # firefox_options = webdriver.FirefoxOptions()
-
     # firefox_options.add_argument("--headless")
     # driver = webdriver.Firefox(options=firefox_options)
 
