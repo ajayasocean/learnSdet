@@ -31,9 +31,10 @@ def run_script():
     driver.implicitly_wait(5)
     dropdown1 = Select(driver.find_element_by_id("exampleFormControlSelect1"))
     driver.implicitly_wait(5)
-    print(dropdown1.select_by_visible_text("Female"))
+    # dropdown methods
+    dropdown1.select_by_visible_text("Female")
     driver.implicitly_wait(5)
-    print(dropdown1.select_by_index(0))
+    dropdown1.select_by_index(0)
     driver.implicitly_wait(5)
     # print(dropdown1.select_by_value("value of element"))
     driver.quit()

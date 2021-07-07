@@ -38,7 +38,9 @@ def test_locators():
     # find element by xpath with regular expression,
     # syntax1: //tagname[contains(@attribute,'value')]
     # syntax2: //*[contains(@attribute,'value')]
-    print(driver.find_element_by_xpath("//*[contains(@class,'alert-success')]").text)
+    message = driver.find_element_by_xpath("//*[contains(@class,'alert-success')]").text
+    # assert 'fail' in message  # negative assertion
+    assert 'success' in message
     driver.quit()
     print("webdriver is done for the day")
 
