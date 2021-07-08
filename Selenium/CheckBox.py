@@ -1,8 +1,8 @@
-# Auto-suggestive dynamic dropdowns
+# handling checkbox dynamically using selenium
 from driver import CallDriver   # syntax : from fileName import ClassName
 
 
-class AutoDD(CallDriver):
+class Checkbox(CallDriver):
     def __init__(self, driver_type):
         self.type = driver_type
         CallDriver.__init__(self)
@@ -21,27 +21,23 @@ class AutoDD(CallDriver):
 def run_script():
     url = "https://rahulshettyacademy.com/AutomationPractice"
     browser = "headless_chrome"
-    driver_obj = AutoDD(browser)
+    driver_obj = Checkbox(browser)
     driver = driver_obj.invoke_driver()
     driver.get(url)
     driver.implicitly_wait(5)
     print(driver.title)
     driver.implicitly_wait(5)
-    # finding autosuggestive dynamic dropdown and its with via common locator
-    auto_dropdown = driver.find_element_by_id("autocomplete")
-    auto_dropdown.send_keys("ind")
-    driver.implicitly_wait(3)
-    # now using css locator to find elements from dropdpwn
-    res_countries = driver.find_elements_by_css_selector("li[class='ui-menu-item'] div")
-    print(len(res_countries))
-    for country in res_countries:
-        if country.text == 'India':
-            print(country.text)
-            country.click()
-            break
-    assert driver.find_element_by_id("autocomplete").get_attribute('value') == 'India'
+    # finding checkbox via common locator using xpath
+    check_list = driver.find_elements_by_xpath("//input[@type='checkbox']")
+    print(len(check_list))
+    for checkbox in check_list:
+        print(checkbox.get_attribute('value'))
+        if checkbox.get_attribute('value') == 'Option1':
+            checkbox.click()
+            assert checkbox.is_selected()
     driver.quit()
 
 
 if __name__ == '__main__':
     run_script()
+

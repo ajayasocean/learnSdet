@@ -1,8 +1,8 @@
-# Auto-suggestive dynamic dropdowns
+# finding and clicking radio buttons.
 from driver import CallDriver   # syntax : from fileName import ClassName
 
 
-class AutoDD(CallDriver):
+class RadioButton(CallDriver):
     def __init__(self, driver_type):
         self.type = driver_type
         CallDriver.__init__(self)
@@ -21,25 +21,17 @@ class AutoDD(CallDriver):
 def run_script():
     url = "https://rahulshettyacademy.com/AutomationPractice"
     browser = "headless_chrome"
-    driver_obj = AutoDD(browser)
+    driver_obj = RadioButton(browser)
     driver = driver_obj.invoke_driver()
     driver.get(url)
     driver.implicitly_wait(5)
     print(driver.title)
     driver.implicitly_wait(5)
-    # finding autosuggestive dynamic dropdown and its with via common locator
-    auto_dropdown = driver.find_element_by_id("autocomplete")
-    auto_dropdown.send_keys("ind")
-    driver.implicitly_wait(3)
-    # now using css locator to find elements from dropdpwn
-    res_countries = driver.find_elements_by_css_selector("li[class='ui-menu-item'] div")
-    print(len(res_countries))
-    for country in res_countries:
-        if country.text == 'India':
-            print(country.text)
-            country.click()
-            break
-    assert driver.find_element_by_id("autocomplete").get_attribute('value') == 'India'
+    # finding radiobutton via common locator
+    radio_buttons = driver.find_elements_by_name('radioButton')
+    print(len(radio_buttons))
+    radio_buttons[2].click()
+    assert radio_buttons[2].is_selected()
     driver.quit()
 
 
