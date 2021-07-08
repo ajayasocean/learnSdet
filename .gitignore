@@ -22,6 +22,7 @@ pythonBasicsOld/.idea/
 Selenium/*.log
 Selenium/.idea/
 Selenium/venv/
+Selenium/__pycache__/
 basics/.idea/
 basics/venv/
 # to delete files from git: git rm --cached filename
