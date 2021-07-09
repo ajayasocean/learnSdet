@@ -3,6 +3,10 @@
 # promocode: rahulshettyacademy
 import time
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
 from driver import CallDriver   # syntax : from fileName import ClassName
 
 
@@ -30,7 +34,7 @@ def cart_script():
     driver.get(url)
     driver.implicitly_wait(5)
     print(driver.title)
-    driver.implicitly_wait(5)
+    # driver.implicitly_wait(5)
     driver.find_element_by_xpath("//input[@class='search-keyword']").send_keys('ber')
     time.sleep(4)
     # validating product count after entering ber in search box
@@ -41,17 +45,20 @@ def cart_script():
     print(len(add_to_cart))
     for button in add_to_cart:
         button.click()
-        driver.implicitly_wait(1)
+        # driver.implicitly_wait(1)
     # clicking the cart icon xpath: img[alt='Cart']
     driver.find_element_by_css_selector("img[alt = 'Cart']").click()
-    driver.implicitly_wait(5)
+    # driver.implicitly_wait(5)
     # clicking on proceed to checkout
     driver.find_element_by_xpath("//button[text()='PROCEED TO CHECKOUT']").click()
     time.sleep(5)
-    print(driver.current_url)
+    # explicit wait
+    wait = WebDriverWait(driver, 5)
+    wait.until(expected_conditions.presence_of_element_located((By.XPATH, "//input[@class='promoCode']")))
     # entering data into promo code field
     driver.find_element_by_xpath("//input[@class='promoCode']").send_keys('rahulshettyacademy')
-    driver.implicitly_wait(7)
+    print(driver.current_url)
+    # driver.implicitly_wait(7)
     # clicking Apply button
     driver.find_element_by_xpath("//button[@class='promoBtn']").click()
     # checking for code applied text.
